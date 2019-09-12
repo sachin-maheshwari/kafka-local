@@ -20,7 +20,9 @@ app.post('/events', function (req, res) {
   producer.send({
     topic: topic,
     partition: 0,
-    message: payload
+    message: {
+       value : JSON.stringify(payload)
+    }
   }).then(function (result) {
     res.send('done')
   });
