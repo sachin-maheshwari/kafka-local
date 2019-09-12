@@ -6,7 +6,7 @@ const topic = 'test-topic';
 
 const dataHandler = function (messageSet, topic, partition) {
     return Promise.each(messageSet, function (m) {
-        console.log(topic, partition, m.offset, m.message.value.toString('utf8'));
+        console.log(topic, partition, m.offset, m.message.toString('utf8'));
         // commit offset
         return consumer.commitOffset({ topic: topic, partition: partition, offset: m.offset, metadata: 'optional' });
     });
