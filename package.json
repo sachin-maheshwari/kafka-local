@@ -1,0 +1,24 @@
+{
+  "name": "kafka-local",
+  "version": "1.0.0",
+  "description": "Setup local kafka",
+  "main": "consumer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sachin-maheshwari/kafka-local.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sachin-maheshwari/kafka-local/issues"
+  },
+  "homepage": "https://github.com/sachin-maheshwari/kafka-local#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "no-kafka": "^3.4.3"
+  }
+}

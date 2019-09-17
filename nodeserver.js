@@ -1,10 +1,9 @@
 const express = require('express')
-const app = express()
-const port = process.env.PORT || 8080;
 const Kafka = require('no-kafka')
 const bodyParser = require('body-parser')
 
-
+const app = express()
+const port = process.env.PORT || 8080;
 app.use(bodyParser.json());       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
@@ -36,9 +35,6 @@ const producer = new Kafka.Producer()
 
 producer.init().then(function () {
   console.log('connected to local kafka server on port 9092 ...');
-
-  // respond with "hello world" when a GET request is made to the homepage
-
 
   // start the server
   app.listen(port);
