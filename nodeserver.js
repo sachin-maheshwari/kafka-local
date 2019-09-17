@@ -15,8 +15,8 @@ app.get('/', function (req, res) {
 
 app.post('/events', function (req, res) {
   const payload = req.body
-  const topic = payload.topic
-  
+  // const topic = payload.topic
+  const topic = 'test-topic';
   producer.send({
     topic: topic,
     partition: 0,
